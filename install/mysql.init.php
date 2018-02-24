@@ -3,8 +3,9 @@
 * TaskFreak!                                                                 *
 * multi user                                                                 *
 ******************************************************************************
-* Version: 0.6.3                                                             *
+* Version: 0.7.2                                                             *
 * Authors: Stan Ozier <taskfreak@gmail.com>                                  *
+* Authors: Robert Knight <bobby.knight@gmail.com>                            *
 * License:  http://www.gnu.org/licenses/gpl.txt (GPL)                        *
 \****************************************************************************/
 
@@ -18,7 +19,7 @@ CREATE TABLE `{$dbPrefix}country` (
   `countryId` char(2) NOT NULL default '',
   `name` varchar(100) NOT NULL default '',
   PRIMARY KEY  (`countryId`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 INSERT INTO `{$dbPrefix}country` VALUES ('AF', 'Afghanistan');
 INSERT INTO `{$dbPrefix}country` VALUES ('AL', 'Albania');
 INSERT INTO `{$dbPrefix}country` VALUES ('DZ', 'Algeria');
@@ -278,7 +279,7 @@ CREATE TABLE `{$dbPrefix}item` (
   PRIMARY KEY  (`itemId`),
   KEY `projectId` (`projectId`),
   KEY `memberId` (`memberId`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 INSERT INTO `{$dbPrefix}item` VALUES (1, 1, 0, 3, '1', 'Congratulations! This is your first task', 'First of all, read the README.txt if you haven''t done it yet.\r\n\r\nLots of informations in there.', '9999-00-00', 0, 0, 0, 1, 1);
 INSERT INTO `{$dbPrefix}item` VALUES (2, 1, 0, 5, '1', 'How to create a user', 'To create a new user, go to menu <i>manage > users</i> \r\n\r\nthen click on the <img src="skins/redfreak/images/b_new.png" /> button.', '9999-00-00', 0, 0, 2, 1, 1);
 INSERT INTO `{$dbPrefix}item` VALUES (3, 1, 0, 7, '4', 'Send some feedback', 'To send some feedback to the author, go to\r\n<a href="http://forum.taskfreak.com" target="_blank">http://forum.taskfreak.com</a>\r\n\r\nPlease remember you can donate by paypal on\r\n<a href="http://www.taskfreak.com" target="_blank">http://www.taskfreak.com</a>', '9999-00-00', 0, 0, 1, 1, 1);
@@ -294,7 +295,7 @@ CREATE TABLE `{$dbPrefix}itemComment` (
   `lastChangeDate` datetime NOT NULL default '0000-00-00 00:00:00',
   PRIMARY KEY  (`itemCommentId`),
   KEY `taskId` (`itemId`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 EOSQL;
 
 $sqlItemFile = <<< EOSQL
@@ -311,7 +312,7 @@ CREATE TABLE `{$dbPrefix}itemFile` (
   `fileTags` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`itemFileId`),
   KEY `taskId` (`itemId`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 EOSQL;
 
 $sqlItemStatus = <<< EOSQL
@@ -323,7 +324,7 @@ CREATE TABLE `{$dbPrefix}itemStatus` (
   `memberId` mediumint(8) unsigned NOT NULL default '0',
   PRIMARY KEY  (`itemStatusId`),
   KEY `itemId` (`itemId`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 INSERT INTO `{$dbPrefix}itemStatus` VALUES (1, 1, '2006-06-01 00:00:00', 0, 1);
 INSERT INTO `{$dbPrefix}itemStatus` VALUES (2, 2, '2006-06-01 00:00:00', 0, 1);
 INSERT INTO `{$dbPrefix}itemStatus` VALUES (3, 3, '2006-06-01 00:00:00', 0, 1);
@@ -362,7 +363,7 @@ CREATE TABLE `{$dbPrefix}member` (
   `enabled` tinyint(1) unsigned NOT NULL default '0',
   PRIMARY KEY  (`memberId`),
   KEY `username` (`username`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 INSERT INTO `{$dbPrefix}member` VALUES (1, 'admin@taskfreak.com', 'Mr', 'Admin', '', 'Istrator', '', '', '', 'FR', '', '', '', 'admin', '', '12345678', 0, 7200, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '2006-06-01 00:00:00', '0000-00-00 00:00:00', 0, 0, 4, '', 1, 1);
 EOSQL;
 
@@ -372,7 +373,7 @@ CREATE TABLE `{$dbPrefix}memberProject` (
   `projectId` mediumint(8) unsigned NOT NULL default '0',
   `position` tinyint(3) unsigned NOT NULL default '0',
   PRIMARY KEY  (`memberId`,`projectId`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 INSERT INTO `{$dbPrefix}memberProject` VALUES (1, 1, 5);
 EOSQL;
 
@@ -382,7 +383,7 @@ CREATE TABLE `{$dbPrefix}project` (
   `name` varchar(120) NOT NULL default '',
   `description` text NOT NULL,
   PRIMARY KEY  (`projectId`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 INSERT INTO `{$dbPrefix}project` VALUES (1, 'Your first project', '');
 EOSQL;
 
@@ -395,7 +396,7 @@ CREATE TABLE `{$dbPrefix}projectStatus` (
   `memberId` mediumint(8) unsigned NOT NULL default '0',
   PRIMARY KEY  (`projectStatusId`),
   KEY `projectId` (`projectId`)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 INSERT INTO `{$dbPrefix}projectStatus` VALUES (1, 1, '2006-06-01 00:00:00', 0, 1);
 EOSQL;
 ?>
