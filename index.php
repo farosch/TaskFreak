@@ -1,11 +1,10 @@
 <?php
 /****************************************************************************\
-* TaskFreak!                                                                 *
-* multi user                                                                 *
+* TaskFreak! Multi User                                                      *
 ******************************************************************************
-* Version: 0.6.3                                                             *
-* Authors: Stan Ozier <taskfreak@gmail.com>                                  *
-* License:  http://www.gnu.org/licenses/gpl.txt (GPL)                        *
+* Version: 0.7.2                                                             *
+* Authors: Stan Ozier <taskfreak@gmail.com>, Faryan Rezagholi                *
+* License:  http://www.gnu.org/licenses/gpl.txt (GPL)   	                 *
 ******************************************************************************
 * This file is part of "TaskFreak! multi user" program.                      *
 *                                                                            *
@@ -299,7 +298,7 @@ if ($objItemList->rMore()) {
                         }
 												// Check files and show icon
 												?>
-												<a href="javascript:freak_view(<?php echo $objItem->id; ?>,'file');"><img id="fileIcon<?php echo $objItem->id; ?>" src="<?php echo PLG_FILE_DIR; ?>/images/files.png" width="12" height="11" alt="files" border="0" align="absmiddle" style="display:none" /></a>
+												<a href="javascript:freak_view(<?php echo $objItem->id; ?>,'file');"><img id="fileIcon<?php echo $objItem->id; ?>" src="skins/<?php echo FRK_SKIN_FOLDER; ?>/images/files.png" width="12" height="11" alt="files" border="0" align="absmiddle" style="display:none" /></a>
 												<?php
 												$objFileList = new ItemFile();
 												$objFileList->addWhere('itemId='.$objItem->id);

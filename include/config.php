@@ -1,18 +1,17 @@
 <?php
 /****************************************************************************\
-* TaskFreak!                                                                 *
-* multi user                                                                 *
+* TaskFreak! Multi User                                                      *
 ******************************************************************************
-* Version: 0.6.4                                                             *
-* Authors: Stan Ozier <taskfreak@gmail.com>                                  *
-* License:  http://www.gnu.org/licenses/gpl.txt (GPL)                        *
+* Version: 0.7.2                                                             *
+* Authors: Stan Ozier <taskfreak@gmail.com>, Faryan Rezagholi                *
+* License:  http://www.gnu.org/licenses/gpl.txt (GPL)   	                 *
 \****************************************************************************/
 
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 
 define('TZN_DB_HOST','localhost');
-define('TZN_DB_USER','taskfreak');       // edit here
-define('TZN_DB_PASS','taskfreak');           // edit here
+define('TZN_DB_USER','taskfreak');  // edit here
+define('TZN_DB_PASS','taskfreak');  // edit here
 define('TZN_DB_BASE','taskfreak');  // edit here
 define('TZN_DB_PREFIX','tf');
 define('TZN_DB_CLASS','tzn_mysql.php');
@@ -71,14 +70,16 @@ define('TZN_FILE_UPLOAD_URL','files/');
 // uncomment the following if you have slashes added before quotes in submitted input
 // define('TZN_MAGIC_FIX',TRUE);
 
+// change "http" to "https" when using SSL
 define('PRJ_WWW_URL','http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SELF']).'/');
 
 // === TASKFREAK CUSTOMIZATION ================================
 
-// === FILE ATTACHMENT PLUGIN SETTINGS ========================
-define(PLG_FILE_VER, "0.1.2");
-define(PLG_FILE_TITLE, "FileAttach_".PLG_FILE_VER);
-define(PLG_FILE_DIR, PRJ_ROOT_PATH."plugins/data/installed/".PLG_FILE_TITLE);
+define('FRK_VERSION','0.7.2');
+define('FRK_VERSION_RELEASE','2019-02-02');
+
+define('FRK_MYSQL_VERSION_GT_4_1',FALSE);
+
 // your files store, write permissions required
 define('FRK_ATTACHMENT_FOLDER', PRJ_ROOT_PATH.'files/'); 
 // allow - only listed attachments can be uploaded, disallow - allow all except listed
@@ -87,12 +88,6 @@ define('FRK_ATTACHMENT_EXCLUSION', 'disallow');
 define('FRK_ATTACHMENT_LIST', 'aspx,tmp,lnk');
 // show notification message about the attachment settings
 define('FRK_ATTACHMENT_NOTIFY', true);
-// === FILE ATTACHMENT PLUGIN SETTINGS ========================
-
-define('FRK_VERSION','0.7.1-dev');
-define('FRK_VERSION_RELEASE','2016-10-26');
-
-define('FRK_MYSQL_VERSION_GT_4_1',FALSE);
 
 // number of priority levels
 define('FRK_PRIORITY_LEVELS',9);	// 3, 5 or 9

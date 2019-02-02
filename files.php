@@ -155,7 +155,7 @@ if ($_POST) {
 <title>TaskFreak!<?php if ($pPageTitle) { echo ' '.$pPageTitle; } ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo FRK_CHARSET; ?>" />
 <link rel="stylesheet" type="text/css" href="skins/<?php echo FRK_SKIN_FOLDER; ?>/css/freak.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo PLG_FILE_DIR; ?>/css/files.css" />
+<link rel="stylesheet" type="text/css" href="/css/files.css" />
 <script type="text/javascript">
 function freak_file_upload() {
 	if (!document.getElementById('fileupload').value) {
@@ -167,7 +167,7 @@ function freak_file_upload() {
 		document.getElementById('file_transfer_body').innerHTML =
 			'<div align="center" style="font-size:10px">'
 			+ '<br><br><strong>Please wait while the file is being uploaded</strong><br><br>'
-			+ '<img src="<?php echo PLG_FILE_DIR; ?>/images/working.gif">'
+			+ '<img src="<?php echo FRK_SKIN_FOLDER; ?>/images/working.gif">'
 			+ '</div>';
 	}
 }

@@ -15,18 +15,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo FRK_CHARSET; ?>" />
 <link rel="SHORTCUT ICON" href="favicon.ico" />
 <link rel="stylesheet" type="text/css" href="skins/<?php echo FRK_SKIN_FOLDER; ?>/css/freak.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo PLG_FILE_DIR; ?>/css/files.css" />
-<!--[if gte IE 5.5]>
-<![if lt IE 7]>
-<style type="text/css">
-div#header {
-    position: absolute;
-    left: expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
-    top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
-}
-</style>
-<![endif]>
-<![endif]-->
+<link rel="stylesheet" type="text/css" href="skins/<?php echo FRK_SKIN_FOLDER; ?>/css/files.css" />
 <link rel="stylesheet" type="text/css" href="skins/<?php echo FRK_SKIN_FOLDER; ?>/css/priority<?php echo FRK_PRIORITY_LEVELS; ?>.css" />
 <?php
 if ($pUserIsLogged) {
