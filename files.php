@@ -106,8 +106,8 @@ else {
 if ($_POST) {
 	$file = $_FILES['fileupload']['name'];
 	$desc = $_POST['filedesc'];
-	$desc = ereg_replace("\r|\n", "<br>", $desc);
-	$desc = ereg_replace("(<br>)+", "<br>", $desc);
+	$desc = preg_replace("/\r|\n/", "<br>", $desc);
+	$desc = preg_replace("/(<br>)+/", "<br>", $desc);
 	# Exclusion Security
 	$ext = substr($file,strrpos($file,".")+1);
 	if (FRK_ATTACHMENT_EXCLUSION == "allow") {  // allowed only these
