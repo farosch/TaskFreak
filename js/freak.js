@@ -238,6 +238,7 @@ function freak_tab(tab) {
 	freak_body_edit();
 	if (gE('vmore')) {
 		arr = new Array('desc','comm','hist');
+		arr[arr.length] = 'file';
 		for (i=0;i<arr.length;i++) {
 			if (arr[i] != tab) {
 				e=gE('t'+arr[i]);
@@ -273,7 +274,9 @@ function freak_body_edit(id,body) {
 		}
 		ff.onsubmit = freak_body_submit;
 		hD(gE('vmore'));
-		sD(gE('vedit'));
+		hD(gE('vfedit'));
+		hD(gE('vedit'));
+		hD(gE('vfedit'));
 	} else {
 		if (e) {
 			e.value = '';
@@ -301,6 +304,19 @@ function freak_comment_delete(id) {
 		freak_start();
 		xajax_task_comment_delete(id);
 	}
+}
+function freak_file_add() {
+	freak_start();
+	sD(gE('vfedit'));
+	hD(gE('vmore'));
+}
+function freak_file_download(id) {
+	freak_start();
+	xajax_task_file_download(id);
+}
+function freak_file_delete(id) {
+	freak_start();
+	xajax_task_file_delete(id);
 }
 function freak_body_submit() {
 	//alert('submiting taskId='+ff.elements['id'].value+' comment='+ff.elements['veditid'].value);

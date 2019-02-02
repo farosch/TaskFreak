@@ -59,6 +59,7 @@
             <ul>
 				<li id="tdesc" class="active"><a href="javascript:freak_more('desc')"><?php echo $GLOBALS['langTaskDetails']['tab_description']; ?></a></li>
                 <li id="tcomm"><a href="javascript:freak_more('comm')"><?php echo $GLOBALS['langTaskDetails']['tab_comments']; ?></a></li>
+                <li id="tfile"><a href="javascript:freak_more('file')" onclick="this.blur()">files</a></li>
                 <li id="thist"><a href="javascript:freak_more('hist')"><?php echo $GLOBALS['langTaskDetails']['tab_history']; ?></a></li>
             </ul>
 		</div>
@@ -71,6 +72,10 @@
 				</div>
 			</div>
 			<div id="vmore"></div>
+			<div id="vfedit" align="center">
+				<iframe id="vfframe" frameborder="0" width="400" height="170" src="files.php"></iframe>
+				<iframe id="vfdownload" frameborder="0" width="0" height="0"></iframe>
+			</div>
 		</div>
         <div id="fsts">
             <div class="flabel2"><?php echo $GLOBALS['langForm']['status']; ?></div>

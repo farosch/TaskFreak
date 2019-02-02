@@ -1,4 +1,6 @@
-Originally developed by Stan Ozier (http://www.taskfreak.com/original/download)
+**Originally developed by Stan Ozier (http://www.taskfreak.com/original/download)**
+
+This version contains fixes for PHP7 and has the attachment plugin originally created by Dracon (https://www.dracon.biz/) already included.
 
 ***
 

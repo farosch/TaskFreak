@@ -11,10 +11,10 @@
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 
 define('TZN_DB_HOST','localhost');
-define('TZN_DB_USER','root');       // edit here
-define('TZN_DB_PASS','');           // edit here
+define('TZN_DB_USER','taskfreak');       // edit here
+define('TZN_DB_PASS','taskfreak');           // edit here
 define('TZN_DB_BASE','taskfreak');  // edit here
-define('TZN_DB_PREFIX','frk');
+define('TZN_DB_PREFIX','tf');
 define('TZN_DB_CLASS','tzn_mysql.php');
 
 define('TZN_DB_DEBUG',2);
@@ -75,7 +75,21 @@ define('PRJ_WWW_URL','http://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['PHP_SEL
 
 // === TASKFREAK CUSTOMIZATION ================================
 
-define('FRK_VERSION','0.7.0');
+// === FILE ATTACHMENT PLUGIN SETTINGS ========================
+define(PLG_FILE_VER, "0.1.2");
+define(PLG_FILE_TITLE, "FileAttach_".PLG_FILE_VER);
+define(PLG_FILE_DIR, PRJ_ROOT_PATH."plugins/data/installed/".PLG_FILE_TITLE);
+// your files store, write permissions required
+define('FRK_ATTACHMENT_FOLDER', PRJ_ROOT_PATH.'files/'); 
+// allow - only listed attachments can be uploaded, disallow - allow all except listed
+define('FRK_ATTACHMENT_EXCLUSION', 'disallow');
+// list of attachments to be included or excluded
+define('FRK_ATTACHMENT_LIST', 'aspx,tmp,lnk');
+// show notification message about the attachment settings
+define('FRK_ATTACHMENT_NOTIFY', true);
+// === FILE ATTACHMENT PLUGIN SETTINGS ========================
+
+define('FRK_VERSION','0.7.1-dev');
 define('FRK_VERSION_RELEASE','2016-10-26');
 
 define('FRK_MYSQL_VERSION_GT_4_1',FALSE);
