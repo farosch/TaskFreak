@@ -35,36 +35,5 @@ $objUser->logout();
 $pUserIsLogged = false;
 $objUser->level = 0;
 
-
-include PRJ_INCLUDE_PATH.'html/header.php';
-?>
-<div align="center">
-	<div id="horiz">
-        <p>&nbsp;</p>
-        <p align="center"><img src="skins/<?php echo FRK_SKIN_FOLDER; ?>/images/freak-logo.png" border="0" alt="TaskFreak!" /></p>
-        <?php
-        if ($pMessageStatus = Tzn::getHttp($_REQUEST['tznMessage'], 'html')) {
-            echo '<p class="box error" style="text-align:center">'.$pMessageStatus.'</p>';
-        }
-        ?>
-        <table cellpadding="2" id="logout" align="center">
-            <tr>
-                <td colspan="2"><?php echo $GLOBALS['langUser']['logout_goodbye']; ?><br />&nbsp;</td>
-            </tr>
-            <tr valign="top">
-                <th><?php echo $GLOBALS['langUser']['last_login']; ?> :</th>
-                <td><?php $objUser->pDtm("lastLoginDate","%a %d %b %Y<br>%r",$userTimeZone); ?></td>
-            </tr>
-            <tr>
-                <th><?php echo $GLOBALS['langUser']['last_login_from']; ?> :</th>
-                <td><?php $objUser->pStr("lastLoginAddress");?></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center"><a href="login.php?"><?php echo $GLOBALS['langUser']['logout_login']; ?></a></td>
-            </tr>
-        </table>
-	</div>
-</div>
-<?php
-include PRJ_INCLUDE_PATH."html/footer.php";
-?>
+header("Location: /login.php");
+die();
