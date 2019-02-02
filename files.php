@@ -155,7 +155,6 @@ if ($_POST) {
 <title>TaskFreak!<?php if ($pPageTitle) { echo ' '.$pPageTitle; } ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo FRK_CHARSET; ?>" />
 <link rel="stylesheet" type="text/css" href="skins/<?php echo FRK_SKIN_FOLDER; ?>/css/freak.css" />
-<link rel="stylesheet" type="text/css" href="/css/files.css" />
 <script type="text/javascript">
 function freak_file_upload() {
 	if (!document.getElementById('fileupload').value) {

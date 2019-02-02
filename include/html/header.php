@@ -15,7 +15,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo FRK_CHARSET; ?>" />
 <link rel="SHORTCUT ICON" href="favicon.ico" />
 <link rel="stylesheet" type="text/css" href="skins/<?php echo FRK_SKIN_FOLDER; ?>/css/freak.css" />
-<link rel="stylesheet" type="text/css" href="skins/<?php echo FRK_SKIN_FOLDER; ?>/css/files.css" />
 <link rel="stylesheet" type="text/css" href="skins/<?php echo FRK_SKIN_FOLDER; ?>/css/priority<?php echo FRK_PRIORITY_LEVELS; ?>.css" />
 <?php
 if ($pUserIsLogged) {
