@@ -1,10 +1,9 @@
 <?php
 /****************************************************************************\
-* TaskFreak!                                                                 *
-* multi user                                                                 *
+* TaskFreak! Multi User                                                      *
 ******************************************************************************
-* Version: 0.6.3                                                             *
-* Authors: Stan Ozier <taskfreak@gmail.com>                                  *
+* Version: 0.7.2                                                             *
+* Authors: Stan Ozier, Faryan Rezagholi                                      *
 * License:  http://www.gnu.org/licenses/gpl.txt (GPL)                        *
 ******************************************************************************
 * This file is part of "TaskFreak! multi user" program.                      *
