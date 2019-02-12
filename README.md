@@ -1,6 +1,4 @@
-**Originally developed by Stan Ozier (http://www.taskfreak.com/original/download)**
-
-This version contains fixes for PHP7 and has the attachment plugin originally created by Dracon (https://www.dracon.biz/) already included.
+Originally developed by [Stan Ozier](http://www.taskfreak.com/original/download) this version contains fixes for PHP7 and has the attachment plugin originally created by [Dracon](https://www.dracon.biz/) already included.
 
 ***
 
@@ -8,7 +6,6 @@ This version contains fixes for PHP7 and has the attachment plugin originally cr
  - PHP 7.0+
  - mySQL 3.23+
  - Mozilla Firefox 1.0+, IE 5.0+, Safari, Google Chrome, Opera 7.0+
- - Runs better on apache
  
 **Tested on**
  - Debian GNU/Linux 9.7 (stretch)
